@@ -3,7 +3,7 @@
 #SBATCH --job-name=TE_32_16
 #SBATCH --output=z_%j.out
 #SBATCH --error=z_%j.err
-#SBATCH --time=24:00:00                # Maximum time for the job 
+#SBATCH --time=48:00:00                # Maximum time for the job 
 #SBATCH --mem=64G                      # Memory required per node 
 #SBATCH --cpus-per-task=4              # Number of CPUs 
 #SBATCH --mail-user=USERNAME@uoguelph.ca # Your email
@@ -20,4 +20,5 @@ pip install --no-index -r requirements.txt
 
 export PYTHONUNBUFFERED=1
 
+echo "Starting the Python script.\n\n"
 python -u bnn_elastic_net_five_folds.py
